@@ -19,9 +19,8 @@ else:
 now = datetime.datetime.now()
 
 if last_run and last_run.date() == now.date():
-    print("Script has already been run today. Exiting.")
+    print("already ran. CLosing.")
 else:
-
     with open(last_run_path, "w") as f:
         f.write(now.strftime("%Y-%m-%d %H:%M:%S"))
 
@@ -55,3 +54,7 @@ else:
     driver.switch_to.window(driver.window_handles[0])
 
     driver.quit()
+
+    # Close the file after writing
+    with open(last_run_path, "w") as f:
+        f.write(now.strftime("%Y-%m-%d %H:%M:%S"))

@@ -18,7 +18,7 @@ search_box: WebElement = driver.find_element(By.NAME, "q")
 search_box.send_keys("alphabet")
 search_box.send_keys(Keys.RETURN)
 
-alphabet = list("abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz12345678901234567890")
+alphabet = list("abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789")
 
 for letter in alphabet:
     actions = ActionChains(driver)
@@ -30,7 +30,7 @@ for letter in alphabet:
     search_box.clear()
     search_box.send_keys(letter)
     search_box.send_keys(Keys.RETURN)
-    time.sleep(3)
+    time.sleep(0.2)
 
 driver.switch_to.window(driver.window_handles[0])
 

@@ -3,6 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
+import time
 
 options = webdriver.EdgeOptions()
 options.set_capability("unhandledPromptBehavior", "ignore")
@@ -29,6 +30,7 @@ for letter in alphabet:
     search_box.clear()
     search_box.send_keys(letter)
     search_box.send_keys(Keys.RETURN)
+    time.sleep(3)
 
 driver.switch_to.window(driver.window_handles[0])
 

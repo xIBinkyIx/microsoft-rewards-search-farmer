@@ -1,5 +1,5 @@
 # microsoft-rewards-search-farmer
-I used charlesbel's before my machine died, then i forgot which i used so i jsut decided to amke my own.
+I used charlesbel's before my machine died, then i forgot which i used so i jsut decided to make my own.
 
 you will need to download selenium which you can do typing:
 ```
